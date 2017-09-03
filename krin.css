@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit:200,400,700&subset=thai');
+/*fix bt*/
+.navbar{
+  min-height: 90px;
+  margin-bottom: 30px;
+  background: rgba(25,0,0,0);
+
+}
+.nav_first{
+  transition: top 0.2s ease-in-out;
+}
+.nav-up {
+  top: -90px;
+}
+.nav-down {
+  top: 0px;
+}
+/**/
+body{
+  background-color: #000;
+  font-family: 'Kanit', sans-serif;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 200;
+}
+.zone{
+  min-height: 100vh;
+  clear: both;
+}
+.zone_head{
+  color: #fff;
+  padding-top: 80px;
+
+  background-image: url('https://2.bp.blogspot.com/-W8dmGLJUEWI/WavsDVvkPzI/AAAAAAAACaQ/6KI7q2RlGXsZXH8NhnrwosqOgDFWNnCIQCLcBGAs/s1600/bghead.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+.zone_head__logo{
+  max-height: 450px;
+}
+
+.zont_head__text_slogan{
+  font-weight: 200;
+}
+/*zone about us*/
+
+.zone_aboutus{
+  background-color:#000;
+}
+.zone_aboutus__headbar{
+  font-size: 1.85em;
+  line-height: 80px;
+  vertical-align: middle;
+}
+.zone_aboutus__content{
+  padding-top: 30px;
+  vertical-align: bottom;
+  line-height: 2em;
+  font-weight: 400;
+}
+.zone_aboutus__content img{
+  opacity: 0.5;
+}
+.zone_aboutus__content hr{
+  border: 1px solid #fff;
+  opacity: 0.3;
+}
+
+/*contact*/
+
+.zone_contact{
+  background-color: #e6e6e6;
+}
+.zone_contact__headbar{
+  font-size: 2.5em;
+  line-height: 80px;
+  font-weight: 400;
+  vertical-align: middle;
+}
+.zone_contact__textsubhead{
+  letter-spacing: 4px;
+  font-size: 2.5em;
+}
+
+.line_box{
+    line-height: 1.3em;
+    vertical-align: middle;
+}
+
+/*footer*/
+footer{
+  min-height: 70px;
+}
