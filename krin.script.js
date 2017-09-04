@@ -1,4 +1,11 @@
 $(function () {
+  $('.carousel').carousel()
+
+  $('.nav_first .nav-item').click(function (e) {
+    e.preventDefault()
+    $('.nav-item').removeClass('active')
+    $(this).addClass('active')
+  })
   // scroll functionz
   // Hide Header on on scroll down
   var didScroll
@@ -6,17 +13,16 @@ $(function () {
   var navbarHeight = $('.nav_first').height()
   var st = $(this).scrollTop()
   var lastScrollTop = st
-  if (st !== 0) {
-    $('.nav_first').removeClass('nav-down').addClass('nav-up')
-  }
+
   if (st == 0) {
-    $('.nav_first').removeClass('bg-light')
+    $('.nav_first').removeClass('bg-white')
   }else {
-    $('.nav_first').addClass('bg-light')
+    $('.nav_first').addClass('bg-white')
   }
 
   $(window).scroll(function (event) {
     didScroll = true
+    return false
   })
 
   setInterval(function () {
@@ -34,6 +40,9 @@ $(function () {
     if (st > lastScrollTop && st > navbarHeight) {
       // Scroll Down
       $('.nav_first').removeClass('nav-down').addClass('nav-up')
+      if ($('.nav_first > button').attr('aria-expanded')) {
+        $('#main_menu').collapse('hide')
+      }
     } else {
       // Scroll Up
       if (st + $(window).height() < $(document).height()) {
@@ -41,9 +50,9 @@ $(function () {
       }
     }
     if (st == 0) {
-      $('.nav_first').removeClass('bg-light')
+      $('.nav_first').removeClass('bg-white')
     }else {
-      $('.nav_first').addClass('bg-light')
+      $('.nav_first').addClass('bg-white')
     }
     lastScrollTop = st
   }
