@@ -31,8 +31,8 @@ jQuery(function () {
   }, 100)
 
   function hasScrolled () {
-    st = jQuery(this).scrollTop()
-
+    st = jQuery(window).scrollTop()
+     console.log(st)
     if (Math.abs(lastScrollTop - st) <= delta)
       return
     if (st > lastScrollTop && st > navbarHeight) {
