@@ -32,24 +32,20 @@ jQuery(function () {
 
   function hasScrolled () {
     st = jQuery(window).scrollTop()
-     console.log(st)
     if (Math.abs(lastScrollTop - st) <= delta)
       return
     if (st > lastScrollTop && st > navbarHeight) {
       // Scroll Down
       jQuery('.nav_first').removeClass('nav-down').addClass('nav-up')
-      console.log('scoll down');
       if (jQuery('.nav_first > button').attr('aria-expanded')) {
         jQuery('#main_menu').collapse('hide')
       }
     } else {
       // Scroll Up
-      if (st + jQuery(window).height() < jQuery(document).height()) {
-        jQuery('.nav_first').removeClass('nav-up').addClass('nav-down')
-              console.log('scoll up');
 
-      }
+      jQuery('.nav_first').removeClass('nav-up').addClass('nav-down')
     }
+
     if (st == 0) {
       jQuery('.nav_first').removeClass('bg-white')
     }else {
