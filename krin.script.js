@@ -11,7 +11,7 @@ jQuery(function () {
   var didScroll
   var delta = 5
   var navbarHeight = jQuery('.nav_first').height()
-  var st = jQuery(this).scrollTop()
+  var st = jQuery(window).scrollTop()
   var lastScrollTop = st
 
   if (st == 0) {
@@ -19,10 +19,8 @@ jQuery(function () {
   }else {
     jQuery('.nav_first').addClass('bg-white')
   }
-
   jQuery(window).scroll(function (event) {
     didScroll = true
-    return false
   })
 
   setInterval(function () {
