@@ -38,6 +38,7 @@ jQuery(function () {
     if (st > lastScrollTop && st > navbarHeight) {
       // Scroll Down
       jQuery('.nav_first').removeClass('nav-down').addClass('nav-up')
+      console.log('scoll down');
       if (jQuery('.nav_first > button').attr('aria-expanded')) {
         jQuery('#main_menu').collapse('hide')
       }
@@ -45,6 +46,8 @@ jQuery(function () {
       // Scroll Up
       if (st + jQuery(window).height() < jQuery(document).height()) {
         jQuery('.nav_first').removeClass('nav-up').addClass('nav-down')
+              console.log('scoll up');
+
       }
     }
     if (st == 0) {
